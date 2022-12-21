@@ -3,10 +3,6 @@ import cohere
 import numpy as np
 import faiss
 
-st.markdown("""
-    <img src=".\images\covid_pic.jpg" alt="My brand logo"/>
-""", unsafe_allow_html=True)
-
 
 # Paste your API key here. Remember to not share publicly
 api_key = "lhNxyU2hx99v6EvkwTqi9hykwpTgaL7cHKWSYd2M"
