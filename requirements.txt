@@ -5,3 +5,7 @@ annoy
 datasets 
 tqdm
 faiss-cpu
+streamlit
+pandas
+numpy
+
