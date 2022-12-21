@@ -3,6 +3,7 @@ import cohere
 import numpy as np
 import faiss
 
+
 # Paste your API key here. Remember to not share publicly
 api_key = "lhNxyU2hx99v6EvkwTqi9hykwpTgaL7cHKWSYd2M"
 
@@ -56,6 +57,7 @@ x = st.slider("Select an number of queries", 2, 25, 3)
 results = search.query(query, int(x))
 st.title("**Results:**")
 for r in results:
+
     
     
     st.markdown("#### Question:")
