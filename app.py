@@ -49,4 +49,8 @@ x = st.slider("Select an number of queries", 2, 25, 3)
 
 results = search.query(query, int(x))
 
-st.write(f"{results}")
+for r in results:
+    
+    st.write("Question:",r["question"])
+    st.write(r["url"], r["answer"]) #here u can add designs to the output
+# st.write(f"{results}")
