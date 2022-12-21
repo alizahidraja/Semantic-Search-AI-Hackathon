@@ -4,7 +4,7 @@ import numpy as np
 import faiss
 
 # Paste your API key here. Remember to not share publicly
-api_key = open("api_key.txt").readlines()[0]
+api_key = "lhNxyU2hx99v6EvkwTqi9hykwpTgaL7cHKWSYd2M"
 
 class SemanticSearch():
 
