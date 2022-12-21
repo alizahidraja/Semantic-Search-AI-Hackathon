@@ -57,7 +57,12 @@ results = search.query(query, int(x))
 st.title("**Results:**")
 for r in results:
     
-    st.write("**Question:**",r["question"])
-    st.write("**Answer:**", r["answer"])  # here u can add designs to the output
-    st.write("**Reference Url:**", r["url"])
+    
+    st.markdown("#### Question:")
+    st.write("\t", r["question"])
+    st.markdown("#### Answer:")
+    st.write("\t",  r["answer"])  # here u can add designs to the output
+    st.markdown("#### Refrence Url:")
+    st.write("\t", r["url"])
+    st.write("-"*80)
 # st.write(f"{results}")
