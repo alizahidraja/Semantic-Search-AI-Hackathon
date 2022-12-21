@@ -43,7 +43,7 @@ st.title("Welcome to Multi Lingual COVID-19 related Search")
 search = SemanticSearch("model/semantic_search.npz", api_key)
 
 
-query = st.text_input("Enter your query", '')
+query = st.text_input("Enter your query", "COVID")
 
 x = st.slider("Select an number of queries", 2, 25, 3)
 
