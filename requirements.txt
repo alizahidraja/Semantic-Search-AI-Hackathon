@@ -1,0 +1,6 @@
+cohere 
+umap-learn 
+altair 
+annoy 
+datasets 
+tqdm
