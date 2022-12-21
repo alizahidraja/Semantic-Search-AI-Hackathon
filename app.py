@@ -3,6 +3,11 @@ import cohere
 import numpy as np
 import faiss
 
+st.markdown("""
+    <img src=".\images\covid_pic.jpg" alt="My brand logo"/>
+""", unsafe_allow_html=True)
+
+
 # Paste your API key here. Remember to not share publicly
 api_key = "lhNxyU2hx99v6EvkwTqi9hykwpTgaL7cHKWSYd2M"
 
@@ -50,7 +55,11 @@ x = st.slider("Select an number of queries", 2, 25, 3)
 results = search.query(query, int(x))
 
 for r in results:
-    
-    st.write("Question:",r["question"])
-    st.write(r["url"], r["answer"]) #here u can add designs to the output
+
+
+    st.markdown("#### Question:")
+    st.write("Question: ", "\t",r["question"])
+    st.markdown("#### Answer:")
+    st.write("\t", r["url"], r["answer"]) #here u can add designs to the output
+    st.write("-"*80)
 # st.write(f"{results}")
