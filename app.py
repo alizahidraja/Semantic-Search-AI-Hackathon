@@ -41,14 +41,20 @@ class SemanticSearch():
 st.title("Welcome to Multi Lingual COVID-19 related Search")
 
 search = SemanticSearch("model/semantic_search.npz", api_key)
+# option = st.selectbox(
+#     'Answer Language?',
+#     ('English', 'Chinease', 'French')) # for drop down menu
 
-
-query = st.text_input("Enter your query", "COVID")
-
+if 'query' not in st.session_state:
+    st.session_state.query = "COVID"
+else:
+    st.session_state.query = st.session_state.query
+query = st.text_input("Enter your query", st.session_state.query)
+st.session_state.query = query
 x = st.slider("Select an number of queries", 2, 25, 3)
 
 results = search.query(query, int(x))
-
+st.title("**Results:**")
 for r in results:
     col1, col2 = st.columns([1, 4])
     col1.write("**Question:**")
