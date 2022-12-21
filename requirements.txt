@@ -4,3 +4,4 @@ altair
 annoy 
 datasets 
 tqdm
+faiss-cpu
