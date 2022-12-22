@@ -43,7 +43,7 @@ class SemanticSearch():
 
 
 
-st.titlel("Welcome to Multi Lingual COVID-19 related Search")
+st.title("Welcome to Multi Lingual COVID-19 related Search")
 
 search = SemanticSearch("model/semantic_search.npz", api_key)
 # option = st.selectbox(
