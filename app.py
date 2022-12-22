@@ -2,6 +2,11 @@ import streamlit as st
 import cohere
 import numpy as np
 import faiss
+from googletrans import Translator
+
+st.image("images\logo.PNG", width=200)
+
+
 
 # Paste your API key here. Remember to not share publicly
 api_key = "lhNxyU2hx99v6EvkwTqi9hykwpTgaL7cHKWSYd2M"
@@ -38,7 +43,7 @@ class SemanticSearch():
 
 
 
-st.title("Welcome to Multi Lingual COVID-19 related Search")
+st.titlel("Welcome to Multi Lingual COVID-19 related Search")
 
 search = SemanticSearch("model/semantic_search.npz", api_key)
 # option = st.selectbox(
@@ -55,19 +60,19 @@ x = st.slider("Select an number of queries", 2, 25, 3)
 
 results = search.query(query, int(x))
 st.title("**Results:**")
+
 for r in results:
-    col1, col2 = st.columns([1, 4])
-    col1.write("**Question:**")
-    col2.write(r["question"])
-    # st.write(r["question"])
 
-
-    col1, col2 = st.columns([1, 4])
-    col1.write("**Answer:**") 
-    col2.write(r["url"] + r["answer"])
+    #link 
+    st.write(f"**{r['url']}**")
+    # Questions
+    st.subheader(f"**{r['question']}**")
+    # Answers
+    st.write(r["answer"])
     #here u can add designs to the output
     st.write("-"*80)
 # st.write(f"{results}")
+
 
 
 
