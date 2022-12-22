@@ -42,20 +42,26 @@ class SemanticSearch():
 st.title("Welcome to Multi Lingual COVID-19 related Search")
 
 search = SemanticSearch("model/semantic_search.npz", api_key)
-# option = st.selectbox(
-#     'Answer Language?',
-#     ('English', 'Chinease', 'French')) # for drop down menu
+option = st.selectbox(
+    'Query Language?',
+    ('English','German', 'Chinease', 'French','Urdu')) # for drop down menu
 
-if 'query' not in st.session_state:
-    st.session_state.query = "COVID"
-else:
-    st.session_state.query = st.session_state.query
-query = st.text_input("Enter your query", st.session_state.query)
-st.session_state.query = query
+# if 'query' not in st.session_state:
+#     st.session_state.query = "COVID"
+# else:
+#     st.session_state.query = st.session_state.query
+query = st.text_input("Enter your query", "COVID")#st.session_state.query)
+# st.session_state.query = query
 x = st.slider("Select an number of queries", 2, 25, 3)
+from translate import Translator
 
-results = search.query(query, int(x))
-st.title("**Results:**")
+
+# print 
+
+translator = Translator(to_lang=option.lower())
+translation = translator.translate(query  )
+results = search.query(translation, int(x))
+st.title("**Results:** ")
 for r in results:
 
     
@@ -63,7 +69,7 @@ for r in results:
     st.markdown("#### Question:")
     st.write("\t", r["question"])
     st.markdown("#### Answer:")
-    st.write("\t",  r["answer"])  # here u can add designs to the output
+    st.write("\t",r["answer"])  # here u can add designs to the output
     st.markdown("#### Refrence Url:")
     st.write("\t", r["url"])
     st.write("-"*80)
