@@ -53,7 +53,7 @@ search = SemanticSearch("model/semantic_search.npz", api_key)
 query = st.text_input("Enter your query", "COVID")#st.session_state.query)
 # st.session_state.query = query
 x = st.slider("Select an number of queries", 2, 25, 3)
-from translate import Translator
+# from translate import Translator
 
 
 # print 
