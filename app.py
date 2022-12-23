@@ -2,7 +2,13 @@ import streamlit as st
 import cohere
 import numpy as np
 import faiss
-st.image("images/logo.png", width=200)
+
+st.set_page_config(page_title='CoDoctor', page_icon = "images/favicon.png", layout = 'wide', initial_sidebar_state = 'auto')
+
+
+col1, col2, col3 = st.columns([1,6,1])
+with col2:
+    st.image("images/logo.png", width=400)
 
 
 
@@ -41,7 +47,7 @@ class SemanticSearch():
 
 
 
-st.title("Welcome to Multi Lingual COVID-19 related Search")
+st.title("Welcome to CoDoctor, Your Personal Multi-Lingual Medical Help Centre with Answers to all your Queries!")
 
 search = SemanticSearch("model/semantic_search.npz", api_key)
 # option = st.selectbox(
