@@ -2,7 +2,7 @@ import streamlit as st
 import cohere
 import numpy as np
 import faiss
-st.image("images\logo.PNG", width=200)
+st.image("images/logo.png", width=200)
 
 
 
