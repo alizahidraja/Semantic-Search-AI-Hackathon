@@ -2,8 +2,6 @@ import streamlit as st
 import cohere
 import numpy as np
 import faiss
-from googletrans import Translator
-
 st.image("images\logo.PNG", width=200)
 
 
