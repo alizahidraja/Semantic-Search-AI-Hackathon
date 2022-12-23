@@ -68,14 +68,14 @@ st.title("**Results:**")
 
 for r in results:
 
-    #link 
-    st.write(f"**{r['url']}**")
+    
     # Questions
     st.subheader(f"**{r['question']}**")
     # Answers
     st.write(r["answer"])
     #here u can add designs to the output
-
+    #link 
+    st.write(f"**{r['url']}**")
     st.write("-"*80)
 # st.write(f"{results}")
 
