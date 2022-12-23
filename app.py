@@ -2,6 +2,8 @@ import streamlit as st
 import cohere
 import numpy as np
 import faiss
+st.image("images\logo.PNG", width=200)
+
 
 
 # Paste your API key here. Remember to not share publicly
@@ -61,16 +63,24 @@ x = st.slider("Select an number of queries", 2, 25, 3)
 # translator = Translator(to_lang=option.lower())
 # translation = translator.translate(query  )
 results = search.query(query, int(x))
-st.title("**Results:** ")
+
+st.title("**Results:**")
+
 for r in results:
 
     
-    
-    st.markdown("#### Question:")
-    st.write("\t", r["question"])
-    st.markdown("#### Answer:")
-    st.write("\t",r["answer"])  # here u can add designs to the output
-    st.markdown("#### Refrence Url:")
-    st.write("\t", r["url"])
+    # Questions
+    st.subheader(f"**{r['question']}**")
+    # Answers
+    st.write(r["answer"])
+    #here u can add designs to the output
+    #link 
+    st.write(f"**{r['url']}**")
     st.write("-"*80)
 # st.write(f"{results}")
+
+
+
+
+
+
