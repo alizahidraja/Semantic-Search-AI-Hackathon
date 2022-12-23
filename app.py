@@ -3,12 +3,10 @@ import cohere
 import numpy as np
 import faiss
 
-st.set_page_config(page_title='CoDoctor', page_icon = "images/favicon.png", layout = 'wide', initial_sidebar_state = 'auto')
+st.set_page_config(page_title='CoDoctor', page_icon = "images/favicon.png", initial_sidebar_state = 'auto')
 
 
-col1, col2, col3 = st.columns([1,6,1])
-with col2:
-    st.image("images/logo.png", width=400)
+st.image("images/logo.png", use_column_width="auto", width=250)
 
 
 
