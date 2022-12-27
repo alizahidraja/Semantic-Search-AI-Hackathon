@@ -5,6 +5,7 @@ Using Cohere for Semantic Search for a AI Hackaton at [LabLab](https://lablab.ai
 ## [LIVE APP](https://alizahidraja-semantic-search-ai-hackathon-app-umkitt.streamlit.app/)
 
 ## [Presentation](https://docs.google.com/presentation/d/1rp6d_tiopwwdljVecH9SmA_PZ1daz-hzdFvp6Lc9gT8/edit#slide=id.p)
+
 ## Steps
 
 1. Read the Multilingual Dataset, this is already in correct columns
